@@ -14,6 +14,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Accept Android Licenses
+        run: yes | flutter doctor --android-licenses
       - run: pip install flet
       - run: flet build apk
       - uses: actions/upload-artifact@v4
