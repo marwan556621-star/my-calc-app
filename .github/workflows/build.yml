@@ -12,6 +12,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
       - run: echo "flet" > requirements.txt
       - run: pip install flet
       - run: flet build apk
