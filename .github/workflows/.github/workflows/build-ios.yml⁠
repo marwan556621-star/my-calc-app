@@ -19,7 +19,7 @@ jobs:
       - name: Install Flet
         run: pip install flet
 
-      # This creates the raw unsigned IPA build for sideloading tools like KSign
+      # This creates the raw unsigned IPA for KSign
       - name: Build Unsigned IPA
         run: yes | flet build ipa --verbose --no-sign
         
